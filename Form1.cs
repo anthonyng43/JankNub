@@ -388,7 +388,7 @@ namespace JankNubTools
         {
             try
             {
-                int playbackRate = int.Parse(comboBox1.SelectedItem.ToString());
+                int playbackRate = int.Parse(comboBox1.SelectedItem.ToString().Replace(" Khz", ""));
 
                 byte[] audioIntro = null;
                 byte[] audioLoop = ConvertAndTrimPCM(loopFilePath, playbackRate, false, true);
